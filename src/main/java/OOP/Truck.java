@@ -1,8 +1,13 @@
 package OOP;
 
-public class Truck {
-    public String modelName;
-    public int wheelsCount;
+public class Truck extends Auto {
+
+    public Truck(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
+    }
+
+    public Truck() {
+    }
 
     public void updateTyre() {
         System.out.println("Меняем покрышку");

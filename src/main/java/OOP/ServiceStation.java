@@ -1,24 +1,24 @@
 package OOP;
 
 public class ServiceStation {
-    public void check(Car car, Bicycle bicycle, Truck truck) {
-        if (car != null) {
-            System.out.println("Обслуживаем " + car.modelName);
-            for (int i = 0; i < car.wheelsCount; i++) {
-                car.updateTyre();
+    public void check(Auto auto) {
+        if (auto.getClass() == Car.class) {
+            System.out.println("Обслуживаем " + auto.getModelName());
+            for (int i = 0; i < auto.getWheelsCount(); i++) {
+                auto.updateTyre();
             }
-            car.checkEngine();
-        } else if (truck != null) {
-            System.out.println("Обслуживаем " + truck.modelName);
-            for (int i = 0; i < truck.wheelsCount; i++) {
-                truck.updateTyre();
+            auto.checkEngine();
+        } else if (auto.getClass() == Truck.class) {
+            System.out.println("Обслуживаем " + auto.getModelName());
+            for (int i = 0; i < auto.getWheelsCount(); i++) {
+                auto.updateTyre();
             }
-            truck.checkEngine();
-            truck.checkTrailer();
-        } else if (bicycle != null) {
-            System.out.println("Обслуживаем " + bicycle.modelName);
-            for (int i = 0; i < bicycle.wheelsCount; i++) {
-                bicycle.updateTyre();
+            auto.checkEngine();
+            auto.checkTrailer();
+        } else if (auto.getClass() == Bicycle.class) {
+            System.out.println("Обслуживаем " + auto.getModelName());
+            for (int i = 0; i < auto.getWheelsCount(); i++) {
+                auto.updateTyre();
             }
         }
     }
