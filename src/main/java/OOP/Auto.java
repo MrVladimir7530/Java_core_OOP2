@@ -12,15 +12,7 @@ public abstract class Auto implements AutoCheck {
     public Auto(){
     }
 
-    public void updateTyre() {
-        System.out.println("Не предусмотренно");
-    }
-
-    public void checkEngine() {
-        System.out.println("Не предусмотренно");
-    }
-
-    public void checkTrailer() {
+    public void check(){
         System.out.println("Не предусмотренно");
     }
 
